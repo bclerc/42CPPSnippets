@@ -1,0 +1,57 @@
+{
+	"cppclass":{
+		"prefix": "cppclass",
+		"body":[
+			"#ifndef ${1/(.*)/${1:/upcase}/}_HPP",
+			"# define ${1/(.*)/${1:/upcase}/}_HPP",
+			" ",
+			"# include <iostream>",
+			" ",
+			"class $1 {",
+			"",
+			"\tpublic:",
+			"\t\t$1 (void);",
+			"\t\t$1($1 & cpy);",
+			"\t\t~$1 (void);",
+			"",
+			"\t\t$1 & operator=($1 const & rhs);",
+			"",
+			"\tprivate:",
+			"\t",
+			"",
+			"};",
+			"",
+			"#endif"
+		],
+		"description": "Create cpp class template for 42 project"
+	},
+	"cppfile":{
+		"prefix": "cppfile",
+		"body":[
+			"#include \"../includes/$1.hpp\"",
+			"",
+			"$1::$1(void)",
+			"{",
+			"\treturn ;",
+			"}",
+			"",
+			"$1::~$1($1 & cpy)",
+			"{",
+			"\tthis = cpy;",
+			"\treturn ;",
+			"}",
+			"",
+			"$1 $1::operator=($1 const & rhs)",
+			"{",
+			"\treturn *this;",
+			"}",
+			"",
+			"$1::~$1(void)",
+			"{",
+			"\treturn ;",
+			"}",
+			""
+		],
+		"description": "Create cpp template for 42 project"
+	}
+}
