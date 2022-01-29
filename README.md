@@ -1,2 +1,3 @@
 # 42CPPSnippets
-Template for cpp class &amp; header
+  cppclass // Template .hpp
+  cppfile // Tempalte .cpp
